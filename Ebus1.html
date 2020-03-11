@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<style>
+	/* body, setting the size of the body and choosing the background image*/
+	body {
+	width: 100%;
+	min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+		
+	background-image:	url("backgrounds/consultingback.jpg");
+	background-repeat:	no-repeat;
+	background-size:	1550px 4000px;
+	}
+
+
+/* section */
+section {
+  width: 50%;
+  min-height: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+
+section::before,
+section::after {
+  content: "";
+  display: inline-block;
+
+  border-radius: 100%;
+
+  position: absolute;
+}
+
+.background {
+  --primary: hsl(250, 100%, 44%);
+  --other: hsl(0, 0%, 14%);
+
+  background-color: #e0e0eb;
+  width: 50em;
+}
+
+/* label */
+label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  margin: 12px 0;
+
+  cursor: pointer;
+  position: relative;
+}
+
+
+/* input */
+.input {
+  opacity: 1;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+
+/* .design */
+.design {
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid var(--other);
+  border-radius: 100%;
+  margin-right: 16px;
+
+  position: relative;
+}
+
+.design::before,
+.design::after {
+  content: "";
+  display: inline-block;
+
+  width: inherit;
+  height: inherit;
+
+  border-radius: inherit;
+
+  position: absolute;
+  transform: scale(0);
+  transform-origin: center center;
+}
+
+.design:before {
+  background: var(--other);
+  opacity: 0;
+  transition: .3s;
+}
+
+.design::after {
+  background: var(--primary);
+  opacity: .4;
+  transition: .6s;
+}
+
+
+/* .text */
+.text {
+  color: var(--other);
+  font-weight: bold;
+}
+
+
+/* checked state */
+.input:checked+.design::before {
+  opacity: 1;
+  transform: scale(.6);
+}
+
+
+/* other states */
+.input:hover+.design,
+.input:focus+.design {
+  border: 1px solid var(--primary);
+}
+
+.input:hover+.design:before,
+.input:focus+.design:before {
+  background: var(--primary);
+}
+
+.input:hover~.text {
+  color: var(--primary);
+}
+
+.input:focus+.design::after,
+.input:active+.design::after {
+  opacity: .1;
+  transform: scale(2.6);
+}
+
+
+		</style>
+		<script>
+			var argSelection = 0; //Start of calculator script
+			var argDiscount, argVat, argPrice;
+			
+			function calcSub() { //Checking which radio buttons are pressed to decide which prices are needed
+				if (a.checked == true){
+				argSelection = a.value;
+				}
+				else if (b.checked == true){
+				argSelection = b.value;
+				}
+				else if (c.checked == true){
+				argSelection = c.value;
+				}
+				calcVatTotal(argSelection);
+			}
+			
+			function calcVatTotal(parmSelection){ //Where all the functions are calculated for the totals, vat, discount etc
+				argDiscount = 0.05 * parmSelection;
+				argVat = 0.2 * parmSelection;
+				argPrice = parmSelection -argDiscount +argVat;
+				display();
+			}
+			function display() {
+				document.getElementById("Subtotal").innerHTML = "Subtotal " + "        " + "€" + argSelection;
+				document.getElementById("Discount").innerHTML = "Discount " + "                " + "-€" + argDiscount.toFixed(2);
+				document.getElementById("VAT").innerHTML = "VAT " + "                     " + "€" + argVat.toFixed(2);
+				document.getElementById("Total").innerHTML = "Total "  + "                  " + "€"+ argPrice.toFixed(2);
+				document.getElementById("line").style = "border: 0; height: 3px; background: #333; width: 300px; display: flex; position: relative;";
+				
+			}
+			
+			//End of calculator script
+
+		</script>
+	</head>
+	<body>
+
+	</br>
+	</br>
+	<!-- Button selections -->
+		<section class="background">
+	<center>
+		<button class ="button"><a href="index.html">Home</a></button>
+		<button class ="button"><a href="CV.html">CV</a></button>
+		<button class ="button"><a href="interests.html">Interests</a></button>		
+		<button class ="button"><a href="consulting.html">Consulting</a></button>
+	</center>
+	<!-- Start of where it shows the prices, radio buttons etc -->
+		<center><h1 style="color:red; display:inline-block; font-family:Arial Black, Gadget, sans-serif">Tech</h1><h1 style="color:blue; display:inline-block;">Sultants</h1></center>
+				<center><h3><u>Cost of different consultations</u></h3></center>
+					<label for="a"><input type="radio" id="a" name="cost" value="20.00" class="input">
+						<span class="design"></span><span class="text">Hyperautomation (€20.00)</span></label><br>
+					<label for="b"><input type="radio" id="b" name="cost" value="40.00" class="input">
+						<span class="design"></span><span class="text">Multiexperience (€40.00)</span></label><br>
+					<label for="c"><input type="radio" id="c" name="cost" value="400.00" class="input">
+						<span class="design"></span><span class="text"> Distributed Cloud (€400.00) </span></label><br>
+			<p id="Subtotal"></p>
+			<p id="Discount"></p>
+			<p id="VAT"></p>
+			<hr id="line">
+			<p id="Total"></p>
+		<!-- buttons where you choose if you want to calculate price, purchase or clear the page -->
+		<b><input class="button" value="Calculate" onclick="calcSub()"> 
+		<input class="button" id="button" value="Purchase" onclick="confirm('Do you want to place this order?');">
+		<input class="button" value="Clear" onclick="window.location.reload()"> </b>
+		</section>
+	</body>
+</html>

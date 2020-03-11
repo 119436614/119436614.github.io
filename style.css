@@ -1,0 +1,119 @@
+		#banner{
+				margin-left:	auto;
+				margin-right:	auto;
+				width:	40em;
+				
+		}
+		
+		#navpanel{
+				margin-left: auto;
+				margin-right: auto;
+				width: 56%;
+				
+				border: double black; 
+				position: center;
+				font-size: large;
+				font-weight:	bold;
+		}
+
+		#navpanel2{
+				margin-left: auto;
+				margin-right: auto;
+				width: 45%;
+				
+				border: double black; 
+				position: center;
+				font-size: large;
+				font-weight:	bold;
+		}
+		
+		#navpanelConsult{
+				margin-left: auto;
+				margin-right: auto;
+				width: 56%;
+				
+				border: double white; 
+				position: center;
+				font-size: large;
+				font-weight:	bold;
+		}
+		
+		#info1{
+				margin-left: auto;
+				margin-right: auto;
+				width: 65em;
+				
+				border: dashed thin black; 
+				position: center;
+				font-size: medium;
+				background: url("https://pulselogistics.ie/htmL%20SITE/background.jpg");
+				color:	black;
+				background-color:#fae6f7
+		}
+
+		#infoConsult{
+				margin-left: auto;
+				margin-right: auto;
+				width: 66em;
+				
+				border: double thick white; 
+				position: center;
+				font-size: medium;
+				background: url("https://pulselogistics.ie/htmL%20SITE/background.jpg");
+				color:	black;
+				background-color:#e0e0eb;
+		}
+		
+			.button{
+				background-color: #0D98BA;
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				border-radius: 8px;
+			}
+			
+			.button:hover {
+					box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			
+			.button2{
+				background-color: #0D98BA;
+				border: none;
+				color: black;
+				padding: 7px 24px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				
+				border-radius: 8px;
+			}
+			
+			.button:active {
+				background-color: #07c6f5;
+			}
+			
+			a{
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			
+			#text{
+				margin-left: 45px;
+			}
+		
+			#textlist
+				margin-left: 40px;
+			}
+			
+			
+			
