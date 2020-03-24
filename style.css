@@ -4,11 +4,13 @@
 				width:	40em;
 				
 		}
+
 		
 		#navpanel{
 				margin-left: auto;
 				margin-right: auto;
-				width: 60%;
+				width: 47%;
+
 				
 				border: double black; 
 				position: center;
@@ -19,7 +21,7 @@
 		#navpanel2{
 				margin-left: auto;
 				margin-right: auto;
-				width: 57%;
+				width: 37%;
 				
 				border: double black; 
 				position: center;
@@ -64,7 +66,7 @@
 				background-color:#e0e0eb;
 		}
 		
-			a{
+			.button{
 				background-color: #0D98BA;
 				border: none;
 				color: white;
@@ -74,12 +76,14 @@
 				display: inline-block;
 				font-size: 16px;
 				margin: 4px 2px;
+				position: center;
 				cursor: pointer;
 				border-radius: 8px;
 				margin-left: 45px;
+
 			}
 			
-			a:hover {
+			.button:hover {
 					box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 			}
 			
@@ -97,6 +101,10 @@
 				margin-left: 5px;
 				
 				border-radius: 8px;
+			}
+			
+			.center {
+			text-align: center;
 			}
 			
 			a:active {

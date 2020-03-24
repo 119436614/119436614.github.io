@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="utf-8">
 	<title>Consulting</title>
 	<!-- connecting to style.css external style sheet -->
-	<!--<link rel="stylesheet" href="style.css"> --> <!-- have to disconnect from style sheet as <a> tag for buttons was causing hyperlinks to become buttons. Change to inline CSS -->
+	<link rel="stylesheet" href="style.css"> 
 	<style>
 	/* setting the background image */
 		body{
 		background-image:	url("backgrounds/consultingback.jpg");
 		background-repeat:	no-repeat;
-		background-size:	1550px 4000px;
+		background-size:	100%;
 		}
 		
 		#infoConsult{
@@ -63,28 +64,15 @@
 </head>
 <body>
 <!--Buttons to connect to different parts of the website -->
-	<div id="navpanelConsult">
-		<a style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" href="index.html">Home</a>
-		<a style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" href="CV.html">CV</a>
-		<a style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" href="interests.html">Interests</a>		
-		<a style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" href="consulting.html">Consulting</a>
-		<a style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" href="ebus1.html">Services</a>
-	</div>
+<section class="center">
+<div id="navpanelConsult">
+  <a href="index.html" class="button">Home</a>
+  <a href="CV.html" class="button">CV</a>
+  <a href="interests.html" class="button">Interests</a>
+  <a href="consulting.html" class="button">Consulting</a>
+  <a href="ebus1.html" class="button">Services</a>
+</div>
+</section>
 	<!--Title, using inline CSS to combine two different headings to allow for two different colours.. attemped to remove <Center> tag for HTML5 compliance but text-align: center; refused to work-->
 <center><h1 style="color:red; display:inline-block; font-family:Arial Black, Gadget, sans-serif">Tech</h1><h1 style="color:blue; display:inline-block;">Sultants</h1></center>
 	<br />

@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
 		<style>
 	/* body, setting the size of the body and choosing the background image*/
@@ -17,7 +18,7 @@
 		
 	background-image:	url("backgrounds/consultingback.jpg");
 	background-repeat:	no-repeat;
-	background-size:	1550px 4000px;
+	background-size:	100%
 	}
 
 
@@ -26,7 +27,7 @@ section {
   width: 50%;
   min-height: inherit;
 
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -49,9 +50,21 @@ section::after {
   --other: hsl(0, 0%, 14%);
 
   background-color: #e0e0eb;
-  width: 50em;
+  width: 60%;
 }
 
+#navpanel3{
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+
+				
+	border: double black; 
+	position: center;
+	font-size: large;
+	font-weight:	bold;
+		}
+		
 /* label */
 label {
   display: flex;
@@ -195,33 +208,22 @@ label {
 	<br />
 	<!-- Button selections -->
 		<section class="background">
-	<center>
-		<a style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" href="index.html">Home</a></button>
-		<a style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" href="CV.html">CV</a></button>
-		<a style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" href="interests.html">Interests</a></button>		
-		<a style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" href="consulting.html">Consulting</a></button>
-	</center>
+<div id="navpanel3">
+  <a href="index.html" class="button">Home</a>
+  <a href="CV.html" class="button">CV</a>
+  <a href="interests.html" class="button">Interests</a>
+  <a href="consulting.html" class="button">Consulting</a>
+</div>
+	<div id="banner">
 	<!-- Start of where it shows the prices, radio buttons etc -->
 		<center><h1 style="color:red; display:inline-block; font-family:Arial Black, Gadget, sans-serif">Tech</h1><h1 style="color:blue; display:inline-block;">Sultants</h1></center>
 				<center><h3><u>Cost of different consultations</u></h3></center>
-					<label for="a"><input type="radio" id="a" name="cost" value="20.00" class="input">
-						<span class="design"></span><span class="text">Hyperautomation (€20.00)</span></label><br>
-					<label for="b"><input type="radio" id="b" name="cost" value="40.00" class="input">
-						<span class="design"></span><span class="text">Multiexperience (€40.00)</span></label><br>
-					<label for="c"><input type="radio" id="c" name="cost" value="400.00" class="input">
-						<span class="design"></span><span class="text"> Distributed Cloud (€400.00) </span></label><br>
+					<label for="a"><input type="radio" id="a" name="cost" value="200.00" class="input">
+						<span class="design"></span><span class="text">Hyperautomation (€200.00)</span></label><br>
+					<label for="b"><input type="radio" id="b" name="cost" value="500.00" class="input">
+						<span class="design"></span><span class="text">Multiexperience (€500.00)</span></label><br>
+					<label for="c"><input type="radio" id="c" name="cost" value="1000.00" class="input">
+						<span class="design"></span><span class="text"> Distributed Cloud (€1000.00) </span></label><br>
 			<p id="Subtotal"></p>
 			<p id="Discount"></p>
 			<p id="VAT"></p>
@@ -229,17 +231,17 @@ label {
 			<p id="Total"></p>
 		<!-- buttons where you choose if you want to calculate price, purchase or clear the page -->
 		<b><input style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
+		          padding: 12px 29px; text-align: center; text-decoration: none; 
 				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" class="button" value="Calculate" onclick="calcSub()"> 
+				  pointer; border-radius: 8px; margin-left: 5px;" class="button" value="Calculate" onclick="calcSub()"> 
 		<input style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
+		          padding: 12px 29px; text-align: center; text-decoration: none; 
 				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
 				  pointer; border-radius: 8px; margin-left: 45px;"  class="button" id="button" value="Purchase" onclick="confirm('Do you want to place this order?');">
 		<input style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
+		          padding: 12px 29px; text-align: center; text-decoration: none; 
 				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px; text-align: center;" class="button" value="Clear" onclick="window.location.reload()"> </b>
+				  pointer; border-radius: 8px; margin-left: 150px; text-align: center;" class="button" value="Clear" onclick="window.location.reload()"> </b>
 		</section>
 	</body>
 </html>

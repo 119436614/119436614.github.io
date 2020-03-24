@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="utf-8">
 	<title>Welcome</title>
-	<!--<link rel="stylesheet" href="style.css">--> <!-- have to disconnect from style sheet as <a> tag for buttons was causing hyperlinks to become buttons. Change to inline CSS -->
+	<link rel="stylesheet" href="style.css"> 
 	
 		<style>
 			/* backround image for the main page */
 			body{
 				background-image:	url("backgrounds/marble.jpg");
 				background-repeat:	no-repeat;
-				background-size:	1550px 2000px;
+				background-size:	100%;
 		}
+
 			/* container 1, 2, 3, 4 all determine the locations, opacity and size of the clickable image boxes. */
 			.container1 {
 			 position: relative;
@@ -108,54 +110,35 @@
 				text-decoration: none;
 				font-weight: bold;
 			}
-			
-		#navpanel{
-				margin-left: auto;
-				margin-right: auto;
-				width: 60%;
-				
-				border: double black; 
-				position: center;
-				font-size: large;
-				font-weight:	bold;
-		}
 		</style>
 </head>
 <body>
 		
 <!-- buttons for moving between different fourms -->
+<section class="center">
 	<div id="navpanel">
-		<a style="background-color: #0D98BA; border: none; color: white; 
-		          padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: 
-				  pointer; border-radius: 8px; margin-left: 45px;" href="index.html">Home</a>
-		<a style="background-color: #0D98BA; border: none; color: white; 
-				  padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; 
-				  border-radius: 8px; margin-left: 45px;" href="CV.html">CV</a>
-		<a style="background-color: #0D98BA; border: none; color: white; 
-				  padding: 15px 32px; text-align: center; text-decoration: none; 
-				  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; 
-				  border-radius: 8px; margin-left: 45px;" href="interests.html">Interests</a>		
-		<a style="background-color: #0D98BA; border: none; color: white; padding: 15px 32px; 
-			      text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; 
-				  border-radius: 8px; margin-left: 45px;" href="consulting.html">Consulting</a>
+		<a href="index.html" class="button">Home</a>
+		<a href="CV.html" class="button">CV</a>
+		<a href="interests.html" class="button">Interests</a>
+		<a href="consulting.html" class="button">Consulting</a>
+		<a href="https://119436614.github.io" class="button">Github</a>
 	</div>
+</section>
 	<div id="banner">
-			<h1 style="color:black; font-size: 45px; text-align: center;">IS1113 Project</h1>
+		<h1 style="color:black; font-size: 45px; text-align: center;">IS1113 Project</h1>
 	</div>
 <br />
-	<br />
-	<br />
-	<!-- container 1-4 determining what images and position -->
-	<div class="container1">
+<br />
+<br />
+<!-- container 1-4 determining what images and position -->
+<div class="container1">
 		<img src="indeximg/cv.jpg" alt="Avatar" class="image" 
 		style="width:100%">
 		<div class="middle">
 		<div class="text"><a href="CV.html">Curriculum Vitae</a></div>
 	</div>
 </div>	
-	<div class="container2">
+<div class="container2">
 		<img src="indeximg/interests.jpg" alt="Avatar" class="image" 
 		style="width:100%">
 		<div class="middle">
